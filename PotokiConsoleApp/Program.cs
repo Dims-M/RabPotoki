@@ -22,10 +22,10 @@ namespace PotokiConsoleApp
 
             // rabPotoki.TekThead(); // Получение статуса потока
 
-            
+
 
         }
-       
+
 
     }
 
@@ -50,18 +50,25 @@ namespace PotokiConsoleApp
             Console.ReadKey();
         }
 
-        /// <summary>
+        public static void SosdanieDelegataAndZapuskThread()
+        {
         /// Делегат для запуска в метода в потоке.
-        /// </summary>
-       public static ThreadStart writeSecond = new ThreadStart(WriteSecond);
+         ThreadStart writeSecond = new ThreadStart(WriteSecond);
+
         // конкретный поток для запуска( из под делегата)
         Thread thread = new Thread(writeSecond);
+            thread.Start();
+
+        }
+
 
         public static void WriteSecond()
         {
             Console.WriteLine("Работает поток № 1");
-        }
+        } //Тестовой метод для визуализации работы потока
 
     }
+}  
 
-}
+
+
