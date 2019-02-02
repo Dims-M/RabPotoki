@@ -10,10 +10,14 @@ namespace PotokiConsoleApp
     {
         static void Main(string[] args)
         {
-
+            Zapuskator();
         }
 
 
+        public static void Zapuskator()
+        {
+
+        }
        
 
     }
