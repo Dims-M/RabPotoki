@@ -21,12 +21,10 @@ namespace PotokiConsoleApp
 
 
             // rabPotoki.TekThead(); // Получение статуса потока
-
+            RabPotoki.SosdanieDelegataAndZapuskThread();
 
 
         }
-
-
     }
 
 
@@ -52,6 +50,7 @@ namespace PotokiConsoleApp
 
         public static void SosdanieDelegataAndZapuskThread()
         {
+            int count = 0;
         /// Делегат для запуска в метода в потоке.
          ThreadStart writeSecond = new ThreadStart(WriteSecond);
 
@@ -59,6 +58,28 @@ namespace PotokiConsoleApp
         Thread thread = new Thread(writeSecond);
             thread.Start();
 
+            while (true)
+            {
+                if (count != 50)
+                {
+                    //break;
+                   // continue;
+                
+                Console.WriteLine($"hПоток {count}");
+                count++;
+                Thread.Sleep(100);
+
+                }
+
+                else
+                {
+                    // Console.WriteLine("Конец потока");
+                    break;
+                    //continue;
+                }
+               // continue;
+            }
+            
         }
 
 
