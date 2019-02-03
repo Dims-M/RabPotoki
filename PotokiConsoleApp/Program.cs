@@ -33,7 +33,7 @@ namespace PotokiConsoleApp
     /// </summary>
     class RabPotoki
     {
-        string nameClass = "Класс для раьоты с потоком 1";
+        string nameClass = "Класс для работы с потоком 1";
 
         //
         public void TekThead()
